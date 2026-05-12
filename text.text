@@ -1,0 +1,122 @@
+publc function store(Request $request)
+{
+    if(!Auth::check()){
+        return response()->json([
+            'ststus' => false,
+            'message' => 'Unauthorized',
+        ], 401);
+    }
+
+    $validator = Validator::make($request->all(), [
+        'name' => 'required|string|max:255,
+        'price' => 'required|integer',
+        'previous_price' => 'required|integer',
+        'discount_persent' => 'nullable|integer',
+
+        'brand_id' => 'nullable|exists:brands,id',
+        'category_id' => 'nullable|exists:categories,id',
+
+        'trending' => 'boolean',
+        'free_delivery' => 'boolean',
+        'emi' => 'boolean',
+        'exchange' => 'boolean',
+
+        'weight' => 'nullable|string',
+        'unit' => 'nullable|string',
+
+        'stock' => 'required|integer',
+
+        'image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+        'description' => 'nullable|string'
+    ]);
+
+    if($validator->fails()){
+        return response()->json([
+            'status' => false,
+            'message' => 'Validation error',
+            'errors' => $validator->errors()
+        ]);
+    }
+
+    $data = $request->all([
+        '',
+        '',
+        '',
+        ....
+        ....
+        '',
+    ]);
+
+    $data['user_id'] = Auth::id()
+
+    if($request->hasFile('image')){
+        $data['image'] = $request->file('image')->store('productImage', 'public')
+    }
+
+    $product = Product::cerate($data);
+    
+    return response()->json([
+        'status' => true,
+        'message' => 'Product created successfull',
+        'data' => $product->load('brand', 'category', 'user')
+    ]);
+}
+
+
+/////////////////////////////////////////////////////////////////////
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<div class="container mx-auto mt-6">
+    <div class="swiper myHeroSwiper overflow-hidden shadow-lg rounded-xl">
+        <div class="swiper-wrapper">
+            @foreach($sliders as $slide)
+                <div class="swiper-slide">
+                    <a href="{{ $slide->url ?? '#' }}">
+                        <img src="{{ asset('storage/' . $slide->image_desktop) }}" 
+                             alt="Desktop Banner" 
+                             class="hidden sm:block w-full h-auto object-cover">
+                        
+                        <img src="{{ asset('storage/' . $slide->image_mobile) }}" 
+                             alt="Mobile Banner" 
+                             class="block sm:hidden w-full h-auto object-cover">
+                    </a>
+                </div>
+            @endforeach
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<style>
+    /* Customizing the Pagination to match your Vue style */
+    .swiper-pagination-bullet-active {
+        background: #13f16c !important;
+        width: 20px !important;
+        border-radius: 5px !important;
+        transition: all 0.3s;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const swiper = new Swiper('.myHeroSwiper', {
+            loop: true,
+            spaceBetween: 20,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    });
+</script>
+
+
+
