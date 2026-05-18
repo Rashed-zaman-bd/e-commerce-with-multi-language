@@ -17,5 +17,6 @@ return [
     'full_name' => 'পূর্ণ নাম',
     'email' => 'ইমেইল',
     'profile_image' => 'প্রোফাইল ছবি',
+    'special_offer' => 'বিশেষ অফার'
 
 ];

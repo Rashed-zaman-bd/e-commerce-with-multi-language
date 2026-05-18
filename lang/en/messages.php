@@ -17,5 +17,6 @@ return [
     'full_name' => 'Full Name',
     'email' => 'Email',
     'profile_image' => 'Profile Image',
+    'special_offer' => 'Special Offer'
 
 ];

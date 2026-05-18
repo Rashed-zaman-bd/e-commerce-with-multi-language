@@ -62,6 +62,9 @@ Route::middleware('auth:sanctum')->group(function(){
 
 Route::get('/hero', [HeroController::class, 'index']);
 Route::get('/hero/{id}', [HeroController::class, 'show']);
-Route::post('/hero', [HeroController::class, 'store']);
-Route::post('/hero/{id}', [HeroController::class, 'update']);
-Route::delete('/hero/{id}', [HeroController::class, 'destroy']);
+
+Route::middleware('auth:sanctum')->group(function(){
+    Route::post('/hero', [HeroController::class, 'store']);
+    Route::post('/hero/{id}', [HeroController::class, 'update']);
+    Route::delete('/hero/{id}', [HeroController::class, 'destroy']);
+});

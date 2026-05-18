@@ -4,8 +4,11 @@
 
 @section('content')
 
-    <x-herobanner/>
+    <x-herobanner :heroes="$heroes"/>
+
     <x-imageMenu :items="$items" />
+
+    <x-offerproduct :products="$products"/>
 
     <div class="mt-10">
         <h1 class="text-3xl font-bold text-blue-600">

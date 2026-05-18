@@ -31,21 +31,38 @@ class Product extends Model
 
     protected static function booted()
     {
-        static::creating(function ($product){
-            if(empty ($product->slug)){
-                $baseSlug = Str::slug($product->name);
-                $slug = $baseSlug;
-                $counter = 1;
+        static::creating(function ($product) {
+            if (empty($product->slug)) {
+                $product->slug = static::generateUniqueSlug($product->name, $product->id);
+            }
+        });
 
-                while(static::where('slug', $slug)->exists()){
-                    $slug = $baseSlug . '-' . $counter;
-                    $counter++;
-                }
-                $product -> slug = $slug;
+        static::updating(function ($product) {
+            if ($product->isDirty('name')) {
+                $product->slug = static::generateUniqueSlug($product->name, $product->id);
             }
         });
     }
 
+    private static function generateUniqueSlug(string $name, $excludeId = null): string
+    {
+        $baseSlug = Str::slug($name);
+        $slug     = $baseSlug;
+        $counter  = 1;
+
+        while (
+            static::where('slug', $slug)
+                ->when($excludeId, fn($q) => $q->where('id', '!=', $excludeId))
+                ->exists()
+        ) {
+            $slug = $baseSlug . '-' . $counter;
+            $counter++;
+        }
+
+        return $slug;
+    }
+
+    
     public function user()
     {
         return $this->belongsTo(User::class);
