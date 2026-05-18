@@ -21,12 +21,8 @@
                 </div>
 
                 <h2 class="text-2xl font-bold text-slate-800">
-                    Create Account
+                    {{ __('messages.register') }}
                 </h2>
-
-                <p class="text-slate-500 mt-2">
-                    Join us and start managing your dashboard
-                </p>
             </div>
 
             <!-- Form -->
@@ -38,7 +34,7 @@
                     <div class="md:col-span-2">
 
                         <label class="block text-sm font-medium text-slate-700 mb-1">
-                            Full Name
+                            {{ __('messages.full_name') }}
                         </label>
 
                         <div class="relative">
@@ -62,7 +58,7 @@
                     <div>
 
                         <label class="block text-sm font-medium text-slate-700 mb-1">
-                            Mobile
+                            {{ __('messages.mobile_number') }}
                         </label>
 
                         <div class="relative">
@@ -86,7 +82,7 @@
                     <div>
 
                         <label class="block text-sm font-medium text-slate-700 mb-1">
-                            Email Address
+                            {{ __('messages.email') }}
                         </label>
 
                         <div class="relative">
@@ -110,7 +106,7 @@
                     <div class="md:col-span-2">
 
                         <label class="block text-sm font-medium text-slate-700 mb-1">
-                            Password
+                            {{ __('messages.password') }}
                         </label>
 
                         <div class="relative">
@@ -138,7 +134,7 @@
                     <div class="md:col-span-2">
 
                         <label class="block text-sm font-medium text-slate-700 mb-2">
-                            Profile Image (Optional)
+                            {{ __('messages.profile_image') }} (Optional)
                         </label>
 
                         <div class="flex items-center gap-4">

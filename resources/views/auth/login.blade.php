@@ -21,12 +21,8 @@
                 </div>
 
                 <h2 class="text-2xl font-bold text-slate-800">
-                    Welcome Back
+                    {{ __('messages.login') }}
                 </h2>
-
-                <p class="text-slate-500 mt-2">
-                    Please enter your details to sign in
-                </p>
             </div>
 
             <!-- Form -->
@@ -36,7 +32,7 @@
                 <div>
 
                     <label class="block text-sm font-medium text-slate-700 mb-1">
-                        Mobile Number
+                        {{ __('messages.mobile_number') }}
                     </label>
 
                     <div class="relative">
@@ -60,7 +56,7 @@
                 <div>
 
                     <label class="block text-sm font-medium text-slate-700 mb-1">
-                        Password
+                        {{ __('messages.password') }}
                     </label>
 
                     <div class="relative">

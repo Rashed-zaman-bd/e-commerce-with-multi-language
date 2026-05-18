@@ -5,6 +5,7 @@
 @section('content')
 
     <x-herobanner/>
+    <x-imageMenu :items="$items" />
 
     <div class="mt-10">
         <h1 class="text-3xl font-bold text-blue-600">
