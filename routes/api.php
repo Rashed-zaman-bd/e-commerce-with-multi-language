@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HeroController;
 use App\Http\Controllers\ImageMenuController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
+use App\Models\Hero;
 use Illuminate\Support\Facades\Route;
 use Laravel\Sanctum\Sanctum;
 
@@ -51,6 +53,15 @@ Route::middleware('auth:sanctum')->group(function () {
 
 Route::get('/image-menu', [ImageMenuController::class, 'index']);
 Route::get('/image-menu/{id}', [ImageMenuController::class, 'show']);
-Route::post('/image-menu', [ImageMenuController::class, 'store']);
-Route::post('/image-menu/{id}', [ImageMenuController::class, 'update']);
-Route::delete('/image-menu/{id}', [ImageMenuController::class, 'destroy']);
+Route::middleware('auth:sanctum')->group(function(){
+    Route::post('/image-menu', [ImageMenuController::class, 'store']);
+    Route::post('/image-menu/{id}', [ImageMenuController::class, 'update']);
+    Route::delete('/image-menu/{id}', [ImageMenuController::class, 'destroy']);
+});
+
+
+Route::get('/hero', [HeroController::class, 'index']);
+Route::get('/hero/{id}', [HeroController::class, 'show']);
+Route::post('/hero', [HeroController::class, 'store']);
+Route::post('/hero/{id}', [HeroController::class, 'update']);
+Route::delete('/hero/{id}', [HeroController::class, 'destroy']);
