@@ -25,7 +25,6 @@
     <x-topbanner/>
 
     <!-- Navbar -->
-    <x-topnav/>
     <x-nav/>
 
     <!-- Main Content -->
