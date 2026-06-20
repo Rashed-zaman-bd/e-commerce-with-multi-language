@@ -17,6 +17,7 @@ return [
     'full_name' => 'পূর্ণ নাম',
     'email' => 'ইমেইল',
     'profile_image' => 'প্রোফাইল ছবি',
-    'special_offer' => 'বিশেষ অফার'
+    'special_offer' => 'বিশেষ অফার',
+    'phone_number' => '০১৭১৭-৭২৬২৫৮',
 
 ];

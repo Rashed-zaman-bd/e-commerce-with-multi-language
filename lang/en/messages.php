@@ -17,6 +17,7 @@ return [
     'full_name' => 'Full Name',
     'email' => 'Email',
     'profile_image' => 'Profile Image',
-    'special_offer' => 'Special Offer'
+    'special_offer' => 'Special Offer',
+    'phone_number' => '01717-726258',
 
 ];
