@@ -120,3 +120,150 @@ publc function store(Request $request)
 
 
 
+///////////////////////////////////////
+
+<!-- Mobile Navbar -->
+<div class="md:hidden">
+
+    <!-- First Row -->
+    <div class="flex items-center justify-between py-3">
+
+        <!-- Logo -->
+        <a href="/" class="font-bold">
+            <h1 class="text-xl">
+                <span class="text-red-500">
+                    Electronics<span class="text-green-500">Zone</span>
+                </span>
+            </h1>
+        </a>
+
+        <!-- Right Icons -->
+        <div class="flex items-center gap-4">
+
+            <!-- Language -->
+            <div class="relative">
+                <button @click="language = !language"
+                    class="bg-gray-100 px-2 py-1 rounded-lg text-sm">
+                    {{ strtoupper(app()->getLocale()) }}
+                </button>
+
+                <div x-show="language"
+                    @click.outside="language = false"
+                    class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border z-[9999]">
+
+                    <a href="{{ route('lang.switch', 'bn') }}"
+                        class="block px-4 py-2 hover:bg-gray-100">
+                        বাংলা
+                    </a>
+
+                    <a href="{{ route('lang.switch', 'en') }}"
+                        class="block px-4 py-2 hover:bg-gray-100">
+                        English
+                    </a>
+                </div>
+            </div>
+
+            <!-- Wishlist -->
+            <a href="#" class="relative">
+                <i class="bi bi-heart text-xl"></i>
+
+                <span
+                    class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
+                    2
+                </span>
+            </a>
+
+            <!-- Cart -->
+            <a href="#" class="relative">
+                <i class="bi bi-cart text-xl"></i>
+
+                <span
+                    class="absolute -top-2 -right-2 bg-green-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
+                    5
+                </span>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Second Row -->
+    <div class="flex items-center justify-around py-3 border-t">
+
+        <!-- Home -->
+        <a href="/" class="flex flex-col items-center text-sm">
+            <i class="bi bi-house text-xl"></i>
+            <span>Home</span>
+        </a>
+
+        <!-- Category -->
+        <div class="relative"
+            @mouseenter="megaMenu = 'category'"
+            @mouseleave="megaMenu = null">
+
+            <button class="flex flex-col items-center text-sm">
+                <i class="bi bi-grid text-xl"></i>
+                <span>Category</span>
+            </button>
+
+            <div x-show="megaMenu === 'category'"
+                class="absolute left-0 mt-3 w-72 bg-white border rounded-lg shadow-lg z-[9999] p-4">
+
+                <ul class="space-y-2">
+                    <li><a href="#">Laptop</a></li>
+                    <li><a href="#">Desktop</a></li>
+                    <li><a href="#">Monitor</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Brand -->
+        <div class="relative"
+            @mouseenter="megaMenu = 'brand'"
+            @mouseleave="megaMenu = null">
+
+            <button class="flex flex-col items-center text-sm">
+                <i class="bi bi-tags text-xl"></i>
+                <span>Brand</span>
+            </button>
+
+            <div x-show="megaMenu === 'brand'"
+                class="absolute left-0 mt-3 w-60 bg-white border rounded-lg shadow-lg z-[9999] p-4">
+
+                <ul class="space-y-2">
+                    <li><a href="#">Apple</a></li>
+                    <li><a href="#">Samsung</a></li>
+                    <li><a href="#">Dell</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- User -->
+        <div class="relative">
+
+            <button @click="accounts = !accounts"
+                class="flex flex-col items-center text-sm">
+
+                <i class="bi bi-person-circle text-xl"></i>
+                <span>User</span>
+            </button>
+
+            <div x-show="accounts"
+                @click.outside="accounts = false"
+                class="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border z-[9999]">
+
+                <a href="/login"
+                    class="block px-4 py-2 hover:bg-gray-100">
+                    Login
+                </a>
+
+                <a href="/register"
+                    class="block px-4 py-2 hover:bg-gray-100">
+                    Register
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
