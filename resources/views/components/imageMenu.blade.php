@@ -23,15 +23,15 @@
         <!-- Left Button -->
         <button
             @click="scrollLeft"
-            class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-100"
+            class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-100 cursor-pointer"
         >
-            <i class="bi bi-chevron-left text-green-600 text-xl"></i>
+            <i class="bi bi-chevron-left text-green-600 text-2xl" ></i>
         </button>
 
         <!-- Cards -->
         <div
             x-ref="slider"
-            class="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide px-12"
+            class="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide"
         >
             @forelse ($items as $item)
                 <div class="flex-none w-40 sm:w-48 p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
@@ -69,9 +69,9 @@
         <!-- Right Button -->
         <button
             @click="scrollRight"
-            class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-100"
+            class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-100 cursor-pointer"
         >
-            <i class="bi bi-chevron-right text-green-600 text-xl"></i>
+            <i class="bi bi-chevron-right text-green-600 text-2xl"></i>
         </button>
 
     </div>

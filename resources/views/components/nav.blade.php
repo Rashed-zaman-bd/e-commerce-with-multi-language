@@ -84,17 +84,17 @@
                 </div>
             </div>
 
-            <div class="hidden md:flex items-center gap-6 lg:gap-10">
+            <div class="hidden md:flex items-center gap-6 lg:gap-15">
                 <div class="relative" @mouseenter="megaMenu = 'category'" @mouseleave="megaMenu = null">
-                    <button class="font-semibold text-lg hover:text-green-600 hover:underline decoration-green-600">
-                        Category
+                    <button class=" text-lg hover:text-green-600 hover:underline decoration-green-600">
+                        {{ __('messages.category') }}
                     </button>
 
                     <div x-show="megaMenu === 'category'" x-transition
                         class="absolute left-0 top-full mt-3 w-[750px] bg-white shadow-xl rounded-lg border p-6 z-[9999]">
                         <div class="grid grid-cols-4 gap-6">
                             <div>
-                                <h3 class="font-bold text-base mb-3 text-green-600">Computers</h3>
+                                <h3 class="font-bold text-base mb-3 text-red-600">{{ __('messages.refrigerator') }}</h3>
                                 <ul class="space-y-2 text-sm">
                                     <li><a href="#" class="hover:text-green-600">Laptop</a></li>
                                     <li><a href="#" class="hover:text-green-600">Desktop</a></li>
@@ -102,7 +102,7 @@
                                 </ul>
                             </div>
                             <div>
-                                <h3 class="font-bold text-base mb-3 text-green-600">Mobile</h3>
+                                <h3 class="font-bold text-base mb-3 text-red-600">{{ __('messages.air_conditioner') }}</h3>
                                 <ul class="space-y-2 text-sm">
                                     <li><a href="#" class="hover:text-green-600">Smartphone</a></li>
                                     <li><a href="#" class="hover:text-green-600">Tablet</a></li>
@@ -110,7 +110,71 @@
                                 </ul>
                             </div>
                             <div>
-                                <h3 class="font-bold text-base mb-3 text-green-600">Accessories</h3>
+                                <h3 class="font-bold text-base mb-3 text-red-600">{{ __('messages.frezz') }}</h3>
+                                <ul class="space-y-2 text-sm">
+                                    <li><a href="#" class="hover:text-green-600">Keyboard</a></li>
+                                    <li><a href="#" class="hover:text-green-600">Mouse</a></li>
+                                    <li><a href="#" class="hover:text-green-600">Headphone</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base mb-3 text-red-600">{{ __('messages.television') }}</h3>
+                                <ul class="space-y-2 text-sm">
+                                    <li><a href="#" class="hover:text-green-600">Keyboard</a></li>
+                                    <li><a href="#" class="hover:text-green-600">Mouse</a></li>
+                                    <li><a href="#" class="hover:text-green-600">Headphone</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base mb-3 text-red-600">{{ __('messages.washing_machine') }}</h3>
+                                <ul class="space-y-2 text-sm">
+                                    <li><a href="#" class="hover:text-green-600">Keyboard</a></li>
+                                    <li><a href="#" class="hover:text-green-600">Mouse</a></li>
+                                    <li><a href="#" class="hover:text-green-600">Headphone</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base mb-3 text-red-600">{{ __('messages.oven') }}</h3>
+                                <ul class="space-y-2 text-sm">
+                                    <li><a href="#" class="hover:text-green-600">Keyboard</a></li>
+                                    <li><a href="#" class="hover:text-green-600">Mouse</a></li>
+                                    <li><a href="#" class="hover:text-green-600">Headphone</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base mb-3 text-red-600">{{ __('messages.kitchen_appliances') }}</h3>
+                                <ul class="space-y-2 text-sm">
+                                    <li><a href="#" class="hover:text-green-600">Keyboard</a></li>
+                                    <li><a href="#" class="hover:text-green-600">Mouse</a></li>
+                                    <li><a href="#" class="hover:text-green-600">Headphone</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base mb-3 text-red-600">{{ __('messages.small_appliances') }}</h3>
+                                <ul class="space-y-2 text-sm">
+                                    <li><a href="#" class="hover:text-green-600">Keyboard</a></li>
+                                    <li><a href="#" class="hover:text-green-600">Mouse</a></li>
+                                    <li><a href="#" class="hover:text-green-600">Headphone</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base mb-3 text-red-600">{{ __('messages.air_solution') }}</h3>
+                                <ul class="space-y-2 text-sm">
+                                    <li><a href="#" class="hover:text-green-600">Keyboard</a></li>
+                                    <li><a href="#" class="hover:text-green-600">Mouse</a></li>
+                                    <li><a href="#" class="hover:text-green-600">Headphone</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base mb-3 text-red-600">{{ __('messages.electricals_lighting') }}</h3>
+                                <ul class="space-y-2 text-sm">
+                                    <li><a href="#" class="hover:text-green-600">Keyboard</a></li>
+                                    <li><a href="#" class="hover:text-green-600">Mouse</a></li>
+                                    <li><a href="#" class="hover:text-green-600">Headphone</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base mb-3 text-red-600">{{ __('messages.hood_hob') }}</h3>
                                 <ul class="space-y-2 text-sm">
                                     <li><a href="#" class="hover:text-green-600">Keyboard</a></li>
                                     <li><a href="#" class="hover:text-green-600">Mouse</a></li>
@@ -125,22 +189,22 @@
                 </div>
 
                 <div class="relative" @mouseenter="megaMenu = 'brand'" @mouseleave="megaMenu = null">
-                    <button class="font-semibold text-lg hover:text-green-600 hover:underline decoration-green-600">
-                        Brand
+                    <button class=" text-lg hover:text-green-600 hover:underline decoration-green-600">
+                        {{ __('messages.brand') }}
                     </button>
 
                     <div x-show="megaMenu === 'brand'" x-transition
                         class="absolute left-0 top-full mt-3 w-[500px] bg-white shadow-xl rounded-lg border p-6 z-[9999]">
                         <div class="grid grid-cols-3 gap-4 text-sm">
-                            <a href="#" class="hover:text-green-600">Apple</a>
-                            <a href="#" class="hover:text-green-600">Samsung</a>
-                            <a href="#" class="hover:text-green-600">Sony</a>
-                            <a href="#" class="hover:text-green-600">Dell</a>
-                            <a href="#" class="hover:text-green-600">HP</a>
-                            <a href="#" class="hover:text-green-600">Asus</a>
-                            <a href="#" class="hover:text-green-600">Xiaomi</a>
-                            <a href="#" class="hover:text-green-600">Lenovo</a>
-                            <a href="#" class="hover:text-green-600">LG</a>
+                            <a href="#" class="text-red-600 hover:text-green-600">{{ __('messages.singer') }}</a>
+                            <a href="#" class="text-red-600 hover:text-green-600">{{ __('messages.beko') }}</a>
+                            <a href="#" class="text-red-600 hover:text-green-600">{{ __('messages.rfl') }}</a>
+                            <a href="#" class="text-red-600 hover:text-green-600">{{ __('messages.vision') }}</a>
+                            <a href="#" class="text-red-600 hover:text-green-600">{{ __('messages.walton') }}</a>
+                            <a href="#" class="text-red-600 hover:text-green-600">{{ __('messages.lg') }}</a>
+                            <a href="#" class="text-red-600 hover:text-green-600">{{ __('messages.hitachi') }}</a>
+                            <a href="#" class="text-red-600 hover:text-green-600">{{ __('messages.philips') }}</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -165,6 +229,43 @@
                     <span class="absolute -top-2 -right-2 bg-green-500 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center">5</span>
                 </a>
             </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Navbar -->
+    <div
+        class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-[0_-2px_10px_rgba(0,0,0,0.08)] z-50 md:hidden">
+
+        <div class="grid grid-cols-4 h-16">
+
+            <!-- Home -->
+            <a href="/"
+                class="flex flex-col items-center justify-center text-gray-600 hover:text-red-600">
+                <i class="bi bi-house-door text-xl"></i>
+                <span class="text-[11px] mt-1">Home</span>
+            </a>
+
+            <!-- Categories -->
+            <a href="#"
+                class="flex flex-col items-center justify-center text-gray-600 hover:text-red-600">
+                <i class="bi bi-grid text-xl"></i>
+                <span class="text-[11px] mt-1">Categories</span>
+            </a>
+
+            <!-- Brand -->
+            <a href="#"
+                class="flex flex-col items-center justify-center text-gray-600 hover:text-red-500">
+                <i class="bi bi-gift text-xl"></i>
+                <span class="text-[11px] mt-1">Brands</span>
+            </a>
+
+            <!-- Account -->
+            <a href="/login"
+                class="flex flex-col items-center justify-center text-gray-600 hover:text-red-500">
+                <i class="bi bi-person text-xl"></i>
+                <span class="text-[11px] mt-1">My Account</span>
+            </a>
 
         </div>
     </div>

@@ -19,5 +19,27 @@ return [
     'profile_image' => 'প্রোফাইল ছবি',
     'special_offer' => 'বিশেষ অফার',
     'phone_number' => '০১৭১৭-৭২৬২৫৮',
+    'category' => 'ক্যাটাগরি',
+    'brand' => 'ব্র্যান্ড',
+    'refrigerator' => 'রেফ্রিজারেটর',
+    'air_conditioner' => 'এয়ার কন্ডিশনার',
+    'frezz' => 'ফ্রিজ',
+    'television' => 'টেলিভিশন',
+    'hood_hob' => 'হুড & হব',
+    'washing_machine' => 'ওয়াশিং মেশিন',
+    'oven' => 'ওভেন',
+    'kitchen_appliances' => 'কিচেন অ্যাপ্লাইনস',
+    'small_appliances' => 'অ্যাপ্লাইনস',
+    'air_solution' => 'এয়ার স্যলুশন',
+    'electricals_lighting' => 'ইলেক্ট্রনিক্স & লাইটিং',
+    'singer' => 'সিঙ্গার',
+    'beko' => 'বেকো',
+    'rfl' => 'আরএফএল',
+    'vision' => 'ভিশন',
+    'walton' => 'ওয়ালটন',
+    'lg' => 'এলজি',
+    'hitachi' => 'হিটাচি',
+    'philips' => 'ফিলিপস'
+
 
 ];
