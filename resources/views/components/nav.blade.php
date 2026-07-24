@@ -5,7 +5,7 @@
     megaMenu: null
 }" class="sticky top-0 z-50 bg-gray-200 shadow-md w-full">
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-1">
 
         <div class="hidden md:flex items-center justify-between py-2 border-b border-gray-300 gap-3">
 

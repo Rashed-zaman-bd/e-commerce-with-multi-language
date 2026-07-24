@@ -32,5 +32,8 @@
         @yield('content')
     </main>
 
+    <!------ footer--------------->
+    <x-footer/>
+
 </body>
 </html>
